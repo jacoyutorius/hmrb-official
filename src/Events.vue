@@ -80,7 +80,7 @@ export default {
   background-color: rgb(245, 245, 245);*/
 }
 .hero-body{
-	padding-top: 20px !important;
+	padding: 20px 100px 0px;
 }
 li {
   display: inline-block;
