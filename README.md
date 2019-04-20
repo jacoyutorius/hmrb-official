@@ -1,16 +1,10 @@
-# hamamatsu-rb-official
+# hmrb-official
 
-Vue.js + Bulma
-
-[http://hmrb-official.s3-website-ap-northeast-1.amazonaws.com/](http://hmrb-official.s3-website-ap-northeast-1.amazonaws.com/)
+> Hamamatsu.rb website
 
 ## Build Setup
 
 ``` bash
-# git clone 
-git clone git@github.com:jacoyutorius/hmrb-official.git
-cd git@github.com:jacoyutorius/hmrb-official.git
-
 # install dependencies
 npm install
 
@@ -19,32 +13,30 @@ npm run dev
 
 # build for production with minification
 npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
 ```
 
-## Doorkeeper API
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-アクセストークンが必要になるとあったが、2016/12/17現在まだ必須になっていない模様.
-(https://www.doorkeeper.jp/news/2016/3/1/update-to-api)
+---
 
-```bash
-curl -i -H "<ACCESS_TOKEN>" https://api.doorkeeper.jp/groups/hmrb/events\?since\=20160601
-```
+## Build on Docker
 
-## S3_Website
-
-AmazonS3にてホスティングしている.
-設定もろもろは[s3_website](https://github.com/laurilehmijoki/s3_website)を使用.
-もし自分のAWS環境でホスティングする場合には以下のように.
-
-s3_website.yml
+run container
 
 ```
-s3_id: AWS_ACCESS_KEY
-s3_secret: AWS_ACCESS_SECRET
-s3_bucket: YOUR_BACKET_NAME
+$ docker-compose build
+$ docker-compose up -d 
+$ docker-compose exec vue_app sh
 ```
 
-```bash
-s3_website cfg apply
-s3_website push
+start dev-server
+
 ```
+/ # cd /app
+/app # yarn run dev
+```
+
+http://0.0.0.0:8080

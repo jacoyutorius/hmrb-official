@@ -1,17 +1,17 @@
-require("bulma")
-require("./sass/common.sass")
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
+import App from './App'
+import router from './router'
 
+require('./assets/sass/main.scss'); 
+
+Vue.config.productionTip = false
+
+/* eslint-disable no-new */
 new Vue({
   el: '#app',
-  template: "<div id='app'>" +
-      "<contents/>" +
-      "<events/>" +
-      "<footer/>" +
-    "</div>",
-  components: {
-  	"contents" : Vue.extend(require("./Contents.vue")),
-    "events" : Vue.extend(require("./Events.vue")),
-    "footer": Vue.extend(require("./Footer.vue"))
-  }
+  router,
+  components: { App },
+  template: '<App/>'
 })
