@@ -9,18 +9,19 @@
 	        We love programing and talking about technorogies.
 	      </h2>
 
-	      <img src="./assets/hmrblogo1_square.png">
+	      <img src="../assets/hmrblogo1_square.png">
 
 	      <div class="messages">
 	      	<h3>
 		      	<p>Hamamatsu.rb(ハママツルビー)は静岡県浜松市にて活動するITコミュニティです。</p>	
-		      	<p>毎月第2水曜日19:00より鴨江アートセンターにて勉強会を開催しています。</p>
+		      	<p>毎月第2水曜日19:00より浜松市内にて勉強会を開催しています。</p>
 		      </h3>
 	      </div>
 	    </div>
 	  </div>
 	</section>
 </template>
+
 <style scoped>
 #contents {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -28,7 +29,6 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  /*margin-top: 60px;*/
   background-color: rgb(245, 245, 245);
 }
 .hero-body{
