@@ -4,18 +4,30 @@
 
 ## Develop on Docker
 
-run container
+### build & run container
 
 ```
 $ docker-compose build
 $ docker-compose up -d 
+```
+
+### start dev-server
+
+```
+$ docker-compose exec vue_app yarn start
+```
+
+or 
+
+containerに入って、
+
+```
 $ docker-compose exec vue_app sh
 ```
 
-start dev-server
+直接起動
 
 ```
-/app # yarn install
 /app # yarn start
 ```
 

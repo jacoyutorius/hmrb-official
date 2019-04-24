@@ -1,10 +1,16 @@
 FROM node:10.15-alpine
 
-WORKDIR .
-RUN apk update && \
-    npm install -g yarn \
-    yarn install vue-cli \
-    yarn install
+WORKDIR /app
+
+COPY . .
+
+RUN : "apk update" && apk update
+
+RUN : "install yarn" && npm install -g yarn
+
+RUN : "install vue-cli" && yarn add vue-cli
+   
+RUN : "yarn install" && yarn install
 
 EXPOSE 8080
 
